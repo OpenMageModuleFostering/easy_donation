@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+<modules>
+  <Wli_Wlicheckout>
+    <version>0.1.0</version>
+  </Wli_Wlicheckout>
+</modules>
+<frontend>
+  <routers>
+    <checkout>
+      <args>
+        <modules>
+          <Wli_Wlicheckout before="Mage_Checkout">Wli_Wlicheckout</Wli_Wlicheckout>
+        </modules>
+      </args>
+    </checkout>
+  </routers>
+</frontend>
+</config>

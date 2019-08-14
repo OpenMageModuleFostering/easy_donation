@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <modules>
+    <Wli_Wlisales>
+      <version>0.1.0</version>
+    </Wli_Wlisales>
+  </modules>
+  <global>
+  <sales>
+        <quote>
+            <totals>
+                <donation>
+                    <class>Wli_Wlisales_Model_Quote_Address_Total_Donation</class>
+                    <before>grand_total</before>
+                </donation>
+            </totals>
+        </quote>
+    </sales>   
+    <models>
+      <sales>
+		<rewrite>
+			<quote_address_total_grand>Wli_Wlisales_Model_Quote_Address_Total_Grand</quote_address_total_grand>
+		</rewrite>
+    </sales>
+    </models>
+  </global>
+</config> 

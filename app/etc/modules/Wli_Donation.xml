@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Wli_Donation>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Wli_Donation>
+		<Wli_Distributors>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Wli_Distributors>
+		<Wli_Manufacturers>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Wli_Manufacturers>
+		<Wli_Dispatched>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Wli_Dispatched>
+		<Wli_Collarinventory>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Wli_Collarinventory>
+		<Wli_Returnlogs>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Wli_Returnlogs>
+    </modules>
+</config>

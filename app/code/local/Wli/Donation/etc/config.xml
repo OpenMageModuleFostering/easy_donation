@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Wli_Donation>
+            <version>0.1.0</version>
+        </Wli_Donation>
+    </modules>
+    <frontend>
+        <routers>
+            <donation>
+                <use>standard</use>
+                <args>
+                    <module>Wli_Donation</module>
+                    <frontName>donation</frontName>
+                </args>
+            </donation>
+        </routers>
+        <layout>
+            <updates>
+                <donation>
+                    <file>donation.xml</file>
+                </donation>
+            </updates>
+        </layout>
+    </frontend>
+     <admin>
+        <routers>
+            <donation>
+                <use>admin</use>
+                <args>
+                    <module>Wli_Donation</module>
+                    <frontName>donation</frontName>
+                </args>
+            </donation>
+        </routers>
+    </admin>     
+     <adminhtml>
+        <menu>
+            <donation module="donation">
+                <title>Donation</title>
+                <sort_order>70</sort_order>
+				
+				<children>
+                    <wli_donation module="donation">
+                        <title>Donation List</title>
+                        <sort_order>1</sort_order>
+                        <action>donation/adminhtml_donation</action>
+                    </wli_donation>
+                </children>
+            </donation>
+			 
+                
+            
+        </menu>
+        <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children>
+                        <donation>
+                            <title>Donation Module</title>
+                            <sort_order>200</sort_order>
+                        </donation>
+                    </children>
+                </admin>
+            </resources>   
+        </acl>
+        <layout>
+            <updates>
+                <donation>
+                    <file>donation.xml</file>
+                </donation>
+            </updates>
+        </layout>
+    </adminhtml>   
+     
+    <global>
+        <models>
+            <donation>
+                <class>Wli_Donation_Model</class>
+                <resourceModel>donation_mysql4</resourceModel>
+            </donation>
+            <donation_mysql4>
+                <class>Wli_Donation_Model_Mysql4</class>
+                <entities>
+                    <donation>
+                        <table>donation</table>
+                    </donation>
+                </entities>
+            </donation_mysql4>
+        </models>
+        <resources>
+            <donation_setup>
+                <setup>
+                    <module>Wli_Donation</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </donation_setup>
+            <donation_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </donation_write>
+            <donation_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </donation_read>
+        </resources>
+        <blocks>
+            <donation>
+                <class>Wli_Donation_Block</class>
+            </donation>
+        </blocks>
+        <helpers>
+            <donation>
+                <class>Wli_Donation_Helper</class>
+            </donation>
+        </helpers>
+    </global>
+</config>

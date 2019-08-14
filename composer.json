@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/Easy_Donation",
+    "type": "magento-module",
+    "license": "GNU-General-Public-License-(GPL)",
+    "homepage": "",
+    "description": "Donation extension allow users to donate funds before checkout for the charity purpose ",
+    "authors": [
+    {
+        "name": "Weblineindia",
+        "email": "partners@weblineindia.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Wli_Wlisales>
+			<active>true</active>
+			<codePool>local</codePool>
+		</Wli_Wlisales>
+	</modules>
+</config>
