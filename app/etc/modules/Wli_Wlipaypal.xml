@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <config>
     <modules>
-        <Wli_Donation>
+	<Wli_Wlipaypal>
             <active>true</active>
             <codePool>local</codePool>
-        </Wli_Donation>
-   </modules>
+        </Wli_Wlipaypal>
+    </modules>
 </config>

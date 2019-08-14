@@ -2,9 +2,18 @@
 <config>
   <modules>
     <Wli_Wlisales>
-      <version>0.1.0</version>
+      <version>0.1.1</version>
     </Wli_Wlisales>
   </modules>
+  <adminhtml>
+		<layout>
+			<updates>
+				<wlisales>
+					<file>wlisales.xml</file>
+				</wlisales>
+			</updates>
+		</layout>
+    </adminhtml>
   <global>
   <sales>
         <quote>

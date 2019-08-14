@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <modules>
+    <Wli_Wlipaypal>
+      <version>0.1.0</version>
+    </Wli_Wlipaypal>
+  </modules>
+  <global>
+  
+ <models>
+      <paypal>
+        <rewrite>
+          <standard>Wli_Wlipaypal_Model_Standard</standard>
+ 
+        </rewrite>
+      </paypal>
+    </models>
+  </global>
+</config> 

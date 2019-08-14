@@ -14,7 +14,7 @@ class Wli_Donation_Adminhtml_DonationController extends Mage_Adminhtml_Controlle
    
     public function indexAction() {
         $this->_initAction();       
-        //$this->_addContent($this->getLayout()->createBlock('donation/adminhtml_donation'));
+        $this->_addContent($this->getLayout()->createBlock('donation/adminhtml_donation'));
         $this->renderLayout();
     }
 

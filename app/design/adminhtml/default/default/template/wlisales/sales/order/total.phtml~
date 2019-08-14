@@ -1,0 +1,13 @@
+<?php 
+$orderId = $this->getRequest()->getParam('order_id');
+$order = Mage::getModel('sales/order')->load($orderId);
+$IncrementId = $order->getIncrementId();
+$DonationModel=Mage::getModel('donation/donation')->getCollection();
+$DonationModel->addFieldToFilter('order_id ', $IncrementId);
+$DonationDetails = $DonationModel->getFirstItem();
+$DonationAmount = $DonationDetails->getDonationAmount();
+
+?>
+<?php if(isset($DonationAmount) && !empty($DonationAmount)):?>
+    <tr><td class="label">sadasf<strong>Donation</strong></td><td>$<?php echo number_format($DonationAmount, 2)?></td></tr><tr>
+    <?php endif;?>

@@ -43,20 +43,17 @@ class Wli_Wlisales_Model_Quote_Address_Total_Grand extends Mage_Sales_Model_Quot
      */
     public function collect(Mage_Sales_Model_Quote_Address $address)
     {
-			
-			//echo "goes here in grand"; exit;
         $grandTotal     = $address->getGrandTotal();
         $baseGrandTotal = $address->getBaseGrandTotal();
-
         $store      = $address->getQuote()->getStore();
         $totals     = array_sum($address->getAllTotalAmounts());
         $totals     = $store->roundPrice($totals);
-				$donationTotal = $address->getDonationAmount();
+		$donationTotal = $address->getDonationAmount();
         $baseTotals = array_sum($address->getAllBaseTotalAmounts());
         $baseTotals = $store->roundPrice($baseTotals);
 
         $address->setGrandTotal($grandTotal+$totals+$donationTotal);
-        $address->setBaseGrandTotal($baseGrandTotal+$baseTotals);
+        $address->setBaseGrandTotal($baseGrandTotal+$baseTotals+$donationTotal);
         return $this;
     }
     
