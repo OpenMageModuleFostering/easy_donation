@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Easy_Donation",
+    "name": "OpenMageModuleFostering\/Easy_Donation",
     "type": "magento-module",
     "license": "GNU-General-Public-License-(GPL)",
     "homepage": "",
     "description": "Easy Donate",
     "authors": [
-    {
-        "name": "Weblineindia",
-        "email": "partners@weblineindia.com"
-    }
-],
+        {
+            "name": "Weblineindia",
+            "email": "partners@weblineindia.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
